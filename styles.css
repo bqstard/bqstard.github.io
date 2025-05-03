@@ -281,10 +281,6 @@ img {
     transform: scale(0.99);
 }
 
-/*#pricesbutton:focus, #gallerybutton:focus, #kofibutton:focus {
-    background-image: url("images/redbutton_vertical.png");
-}*/
-
 #screen::-webkit-scrollbar {
     background: none;
     width: 10px;
