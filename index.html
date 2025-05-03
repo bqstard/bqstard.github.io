@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bqstard's commission page</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="zoom-info">
+                <p id="zoom-info-text">
+                    ctrl +/- to zoom to your preferred size :)
+                </p>
+            </div>
+            <div id="knob-container">
+                <div class="knob"></div>
+                <div class="knob"></div>
+                <div class="knob"></div>
+            </div>
+            <div id="numpad-container">
+                <div class="numpad-button"></div>
+                <div class="numpad-button"></div>
+                <div class="numpad-button"></div>
+                <div class="numpad-button"></div>
+                <div class="numpad-button"></div>
+                <div class="numpad-button"></div>
+                <div class="numpad-button"></div>
+                <div class="numpad-button"></div>
+                <div class="numpad-button"></div>
+            </div>
+            <div id="lightup-container">
+                <button id="pricesbutton" onclick="toPrices()">Prices</button>
+                <button id="pricesbutton2" onclick="toPrices()">Prices</button>
+                <button id="gallerybutton" onclick="toGallery()">Gallery</button>
+                <button id="gallerybutton2" onclick="toGallery()">Gallery</button>
+                <button id="kofibutton"  onclick="toKofi()">Pay</button>
+                <button id="kofibutton2"  onclick="toKofi()">Pay</button>
+            </div>
+            <div id="overlay"></div>
+            <div id="screen">
+                <div id="frontpage">
+                    <p class="content-title">Commission guidelines</p>
+                    <p class="content-text">
+                        > Full payment upfront for commissions under 30€<br>
+                        > Half payment upfront for commissions 30€ or over, other half after sketch is done<br>
+                        > No refunds<br>
+                        > No commercial use (non-negotiable)<br>
+                        > Profile picture / banner / header etc. usage allowed with credit (@bqstard)<br>
+                        > Estimated delivery within 1-3 weeks of beginning commission (extensions possible)<br>
+                    </p>
+                </div>
+                <div id="prices">
+                    <p class="return" onclick="toFront()">← Return</p>
+                    <p class="content-title">Prices</p>
+                    <p class="content-text price-info">
+                        > Additional characters are full price. E.g. 2 characters rendered bust = 2 x 30€ <br><br>
+                        > Details (background, large props) add a minimum of 10€ per item to total price <br><br>
+                        > Simple background (color, texture) is free
+                    </p>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Colored sketch</th>
+                            <th>rendered</th>
+                        </tr>
+                        <tr>
+                            <th>Bust</th>
+                            <th>12€</th>
+                            <th>30€</th>
+                        </tr>
+                        <tr>
+                            <th>Waist</th>
+                            <th>15€</th>
+                            <th>35€</th>
+                        </tr>
+                        <tr>
+                            <th>Thigh</th>
+                            <th>20€</th>
+                            <th>40€</th>
+                        </tr>
+                        <tr>
+                            <th>Full body</th>
+                            <th>25€</th>
+                            <th>60€</th>
+                        </tr>
+                    </table>
+                    <p class="content-title">Size examples</p>
+                    <table>
+                        <tr>
+                            <td class="gallerytable">Bust</td>
+                            <td class="gallerytable"></td>
+                        </tr>
+                        <tr>
+                            <td class="gallerytable"><img src="images/examples/example_bust.png" alt="image"></td>
+                            <td class="gallerytable"><img src="images/examples/example_bust2.png" alt="image"></td>
+                        </tr>
+                        <tr>
+                            <td class="gallerytable">Waist</td>
+                            <td class="gallerytable"></td>
+                        </tr>
+                        <tr>
+                            <td class="gallerytable"><img src="images/examples/example_waist.png" alt="image"></td>
+                            <td class="gallerytable"><img src="images/examples/example_waist2.png" alt="image"></td>
+                        </tr>
+                        <tr>
+                            <td class="gallerytable">Thigh</td>
+                            <td class="gallerytable"></td>
+                        </tr>
+                        <tr>
+                            <td class="gallerytable"><img src="images/examples/example_thigh.png" alt="image"></td>
+                            <td class="gallerytable"><img src="images/examples/example_thigh2.png" alt="image"></td>
+                        </tr>
+                        <tr>
+                            <td class="gallerytable">Full body</td>
+                            <td class="gallerytable"></td>
+                        </tr>
+                        <tr>
+                            <td class="gallerytable"><img src="images/examples/example_full.png" alt="image"></td>
+                            <td class="gallerytable"><img src="images/examples/example_full2.png" alt="image"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="gallery">
+                    <p class="return" onclick="toFront()">← Return</p>
+                    <div id="gal-menu-main">
+                        <p id="rendered" onclick="styleRender()">> Rendered</p>
+                        <p id="sketch" onclick="styleSketch()">> Colored sketch</p>
+                    </div>
+                    <div id="render-content">
+                        <div id="render-content1">
+                            <img class="gallery-img" src="images/examples/render19.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render18.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render17.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render16.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render15.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render14.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render13.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render12.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render11.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render10.png" alt="img">
+                        </div>
+                        <div id="render-content2">
+                            <img class="gallery-img" src="images/examples/render9.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render8.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render7.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render6.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render5.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render4.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render3.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render2.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render1.png" alt="img">
+                            <img class="gallery-img" src="images/examples/render0.png" alt="img">
+                        </div>
+                    </div>
+                    <div id="sketch-content">
+                        <div id="sketch-content1">
+                            <img class="gallery-img" src="images/examples/sketch9.png" alt="img">
+                            <img class="gallery-img" src="images/examples/sketch8.png" alt="img">
+                            <img class="gallery-img" src="images/examples/sketch7.png" alt="img">
+                            <img class="gallery-img" src="images/examples/sketch6.png" alt="img">
+                            <img class="gallery-img" src="images/examples/sketch5.png" alt="img">
+
+                        </div>
+                        <div id="sketch-content2">
+                            <img class="gallery-img" src="images/examples/sketch3.png" alt="img">
+                            <img class="gallery-img" src="images/examples/sketch2.png" alt="img">
+                            <img class="gallery-img" src="images/examples/sketch1.png" alt="img">
+                            <img class="gallery-img" src="images/examples/sketch0.png" alt="img">
+                        </div>
+                    </div>
+                </div>
+                <div id="kofi">
+                    <p class="return" onclick="toFront()">← Return</p>
+                    <p class="content-title">Payment</p>
+                    <p class="content-text">
+                        > Payment is done via PayPal or Ko-fi<br>
+                        > If you'd prefer to pay via PayPal please request a link via DMs</p>
+                        <a href="https://ko-fi.com/bqstard" target="_blank" id= "kofi-link" class="highlight-text">> Link to Ko-fi (external)<br></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="code.js"></script>
+</body>
+</html>

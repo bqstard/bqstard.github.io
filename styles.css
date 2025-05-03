@@ -1,0 +1,296 @@
+html {
+    -moz-transform: scale(0.85);
+    -webkit-transform: 0.85;
+    transform: scale(0.85);
+}
+
+body {
+    margin: 0;
+    background-color: rgb(39, 39, 39);
+}
+
+#main {
+    background-color: black;
+    width: 1300px;
+    height: 738px;
+    margin: 10px auto;
+}
+
+#header {
+    background-image: url("images/header2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 1300px;
+    height: 738px;
+    margin: 0;
+}
+
+#screen {
+    width: 709px;
+    height: 497px;
+    color: white;
+    background-color: rgb(16, 16, 16);
+    float: left;
+    margin: 120px 0 0 94px;
+    overflow-y: scroll;
+    scrollbar-color: rgb(121, 141, 125) transparent;
+    scrollbar-width: thin;
+}
+
+#overlay {
+    background-image: url("images/overlaytexture.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 709px;
+    height: 497px;
+    position: absolute;
+    z-index: 10;
+    filter: opacity(0.1);
+    margin: 120px 0 0 471px;
+    pointer-events: none;
+}
+
+#frontpage {
+    background: none;
+}
+
+#prices {
+    display: none;
+}
+
+#gallery {
+    display: none;
+}
+
+#kofi {
+    display: none;
+}
+
+.content-title {
+    color: transparent;
+    font-size: 55px;
+    margin: 25px 40px;
+    padding: 0;
+    font-family: Rockwell;
+    -webkit-text-stroke: 1.5px rgb(126, 143, 134);
+}
+
+.content-text, .return, .highlight-text, th, td, #zoom-info-text {
+    color: rgb(145, 162, 153);
+    font-family: Rockwell;
+    font-size: 20px;
+    margin: 0 0 0 50px;
+    padding: 0;
+    line-height: 40px;
+}
+
+#zoom-info {
+    width: 180px;
+    position: absolute;
+    margin: 340px 0 0 65px;
+}
+
+#zoom-info-text {
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.price-info {
+    float: left;
+    margin: -160px 0 0 360px;
+    padding: 0 0 50px 0;
+    line-height: 22px;
+    width: 280px;
+    font-size: 18px;
+    text-align: right;
+}
+
+.return {
+    width: 90px;
+}
+
+th, td {
+    margin: 0;
+    padding: 5px 10px;
+    border-bottom: 1px solid rgb(126, 143, 134);
+}
+
+table {
+    margin: 0 0 60px 40px;
+    width: 600px;
+}
+
+.gallerytable {
+    border-bottom: 0px;
+}
+
+img {
+    width: 280px;
+}
+
+.highlight-text {
+    color: rgb(170, 110, 65);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.return {
+    margin: 40px 0 0 50px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#gal-menu-main {
+    width: 500px;
+    height: 50px;
+    background: none;
+    padding: 10px 0 0 50px;
+}
+
+#rendered, #sketch {
+    color: rgb(145, 162, 153);
+    font-family: Rockwell;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 10px 50px 50px 0;
+    float: left;
+}
+
+#rendered {
+    -webkit-text-stroke: 1px rgb(187, 205, 195);
+}
+
+#render-content1, #render-content2, #sketch-content1, #sketch-content2 {
+    width: 290px;
+    background: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+}
+
+#render-content, #sketch-content {
+    margin: 0 0 0 50px;
+}
+
+.gallery-img {
+    margin: 5px 0 0 5px;
+}
+
+#sketch-content {
+    display: none;
+}
+
+#knob-container {
+    background: none;
+    max-width: 80px;
+    min-width: 70px;
+    padding: 82px 0 0 0;
+    margin: 0 0 0 23.6%;
+    text-align: center;
+    float: left;
+}
+
+.knob, .knob-alt {
+    background-image: url("images/knob.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    margin: 6.5px 0 0 0;
+    padding: 0 0 0 0;
+    transition: all 0.4s ease;
+    transform-origin: 47% 53.5%;
+}
+
+.clicked-knob {
+    scale: 1.1;
+}
+
+.knob:hover {
+    transform: rotate(60deg);
+}
+
+.knob-alt:hover {
+    transform: rotate(-35deg);
+}
+
+#numpad-container {
+    background: none;
+    width: 160px;
+    height: 180px;
+    float: left;
+    margin: 509px 0 0 -259px;
+}
+
+.numpad-button {
+    background-image: url("images/btton.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 43px;
+    height: 43px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    filter: brightness(0.9);
+}
+
+.numpad-button:hover {
+    transform: scale(0.88);
+}
+
+.clicked-numpad-button {
+    filter: brightness(1.3);
+}
+
+#lightup-container {
+    background: none;
+    width: 55px;
+    height: 335px;
+    margin: 317px 0 0 -60px;
+    float: left;
+}
+
+#pricesbutton, #gallerybutton, #kofibutton, #pricesbutton2, #gallerybutton2, #kofibutton2 {
+    background: url("images/lightbutton_vertical.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 35px;
+    height: 106px;
+    border: 0;
+    margin: 0 0 1px 0;
+    padding: 0;
+    transition: all 0.15s ease;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(23, 30, 31);
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    cursor: pointer;
+}
+
+#pricesbutton2, #gallerybutton2, #kofibutton2 {
+    display: none;
+    background-image: url("images/redbutton_vertical.png");
+}
+
+#pricesbutton:hover, #gallerybutton:hover, #kofibutton:hover, #pricesbutton2:hover, #gallerybutton2:hover, #kofibutton2:hover {
+    filter: brightness(0.7);
+    transform: scale(0.99);
+}
+
+/*#pricesbutton:focus, #gallerybutton:focus, #kofibutton:focus {
+    background-image: url("images/redbutton_vertical.png");
+}*/
+
+#screen::-webkit-scrollbar {
+    background: none;
+    width: 10px;
+}
+
+#screen::-webkit-scrollbar-thumb {
+    background: rgb(121, 141, 125);
+    border-radius: 12px;
+}
