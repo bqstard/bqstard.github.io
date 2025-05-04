@@ -445,7 +445,7 @@ img {
         padding: 0 0 10px 0;
         transition: all 0.15s ease;
         font-family: 'Courier New', Courier, monospace;
-        font-size: 12px;
+        font-size: 26px;
         font-weight: bold;
         color: rgb(23, 30, 31);
         writing-mode: horizontal-tb;
@@ -514,5 +514,18 @@ img {
     
     #sketch-content {
         display: none;
+    }
+
+    #order-info-text {
+        width: 110px;
+        margin: -20px 0 0 18px;
+    }
+
+    .order-info-text {
+        text-align: center;
+        line-height: 30px;
+        font-size: 26px;
+        text-decoration: underline;
+        cursor: pointer;
     }
 }
