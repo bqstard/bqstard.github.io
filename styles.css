@@ -530,13 +530,14 @@ img {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 780px) {
     html {
         -moz-transform: scale(0.45);
         -webkit-transform: 0.45;
         transform: scale(0.45);
         margin: 0;
         height: 100px;
+        width: 180px;
     }
 
     #main {
