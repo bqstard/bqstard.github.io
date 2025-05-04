@@ -3,6 +3,8 @@ var price = document.getElementById("prices");
 var gall = document.getElementById("gallery");
 var kofi = document.getElementById("kofi");
 var contentscreen = document.getElementById("screen")
+var orderinfoscreen = document.getElementById("orderinfoscreen")
+var orderinfotext = document.getElementById("order-info-text")
 
 var pricesbutton = document.getElementById("pricesbutton")
 var pricesbutton2 = document.getElementById("pricesbutton2")
@@ -16,6 +18,7 @@ function toPrices() {
     gall.style.display = "none";
     kofi.style.display = "none";
     price.style.display = "block";
+    orderinfoscreen.style.display = "none";
     kofibutton.style.display = "inline-block";
     kofibutton2.style.display = "none";
     gallerybutton.style.display = "inline-block";
@@ -23,6 +26,7 @@ function toPrices() {
     pricesbutton.style.display = "none";
     pricesbutton2.style.display = "inline-block";
     contentscreen.scrollTop = 0;
+    orderinfotext.classList.remove("clicked-order-info-text");
 }
 
 function toGallery() {
@@ -30,6 +34,7 @@ function toGallery() {
     price.style.display = "none";
     kofi.style.display = "none";
     gall.style.display = "block";
+    orderinfoscreen.style.display = "none";
     kofibutton.style.display = "inline-block";
     kofibutton2.style.display = "none";
     pricesbutton.style.display = "inline-block";
@@ -37,6 +42,7 @@ function toGallery() {
     gallerybutton.style.display = "none";
     gallerybutton2.style.display = "inline-block";
     contentscreen.scrollTop = 0;
+    orderinfotext.classList.remove("clicked-order-info-text");
 }
 
 function toKofi() {
@@ -44,6 +50,7 @@ function toKofi() {
     price.style.display = "none";
     front.style.display = "none";
     kofi.style.display = "block";
+    orderinfoscreen.style.display = "none";
     kofibutton.style.display = "none";
     kofibutton2.style.display = "inline-block";
     pricesbutton.style.display = "inline-block";
@@ -51,6 +58,7 @@ function toKofi() {
     gallerybutton.style.display = "inline-block";
     gallerybutton2.style.display = "none";
     contentscreen.scrollTop = 0;
+    orderinfotext.classList.remove("clicked-order-info-text");
 }
 
 function toFront() {
@@ -58,12 +66,30 @@ function toFront() {
     price.style.display = "none";
     kofi.style.display = "none";
     front.style.display = "block";
+    orderinfoscreen.style.display = "none";
     kofibutton.style.display = "inline-block";
     kofibutton2.style.display = "none";
     pricesbutton.style.display = "inline-block";
     pricesbutton2.style.display = "none";
     gallerybutton.style.display = "inline-block";
     gallerybutton2.style.display = "none";
+    contentscreen.scrollTop = 0;
+    orderinfotext.classList.remove("clicked-order-info-text");
+}
+
+function orderInfo() {
+    front.style.display = "none";
+    gall.style.display = "none";
+    kofi.style.display = "none";
+    price.style.display = "none";
+    orderinfoscreen.style.display = "block";
+    orderinfotext.classList.add("clicked-order-info-text");
+    kofibutton.style.display = "inline-block";
+    kofibutton2.style.display = "none";
+    gallerybutton.style.display = "inline-block";
+    gallerybutton2.style.display = "none";
+    pricesbutton.style.display = "inline-block";
+    pricesbutton2.style.display = "none";
     contentscreen.scrollTop = 0;
 }
 
